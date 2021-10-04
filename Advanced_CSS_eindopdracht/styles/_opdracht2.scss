@@ -1,0 +1,63 @@
+.gridcontainer {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows:repeat(7, 300px);
+    gap: 10px 10px;
+  }
+  
+  
+  .container2 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: $purple;
+    transition: 0.5s ease;
+
+    & button {
+        visibility: hidden;
+      }
+      
+    &:hover button{
+        visibility: visible;
+      }
+  }
+  
+  .image {
+    position: absolute;
+    display: block;
+    width: 300px;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 2px 2px lightgrey;
+
+  &:hover {
+      opacity: 0;
+    }  
+  }
+  
+ 
+  
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  /* Media Queries */
+
+@media only screen and (min-width: 600px) {
+    .gridcontainer {
+      grid-template-columns:repeat(2, 300px);
+      grid-template-rows:repeat(4, 300px);
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .gridcontainer {
+      grid-template-columns:repeat(3, 300px);
+      grid-template-rows: repeat(3, 300px);
+    }
+  }
